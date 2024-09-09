@@ -51,7 +51,8 @@ class FireReportResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('message')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('status')
+                Tables\Columns\SelectColumn::make('status')
+                    ->options(FireReportStatus::class)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
